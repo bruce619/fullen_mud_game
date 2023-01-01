@@ -1,0 +1,494 @@
+2022-12-13 06:21:11,984 - transactions - ERROR - (check_user): Mapper 'mapped class User->user' has no property 'race'
+2022-12-13 06:21:11,985 - transactions - ERROR - Mapper 'mapped class User->user' has no property 'race'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 2053, in get_property
+    return self._props[key]
+KeyError: 'race'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 351, in check_user
+    user = session.query(User).filter(User.username == username).first()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2161, in query
+    return self._query_cls(entities, self, **kwargs)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\query.py", line 180, in __init__
+    self._set_entities(entities)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\query.py", line 187, in _set_entities
+    self._raw_columns = [
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\query.py", line 188, in <listcomp>
+    coercions.expect(
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\sql\coercions.py", line 181, in expect
+    insp._post_inspect
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 1184, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 2199, in _post_inspect
+    self._check_configure()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1941, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3527, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3566, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1958, in _post_configure_properties
+    prop.init()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 231, in init
+    self.do_init()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2157, in do_init
+    self._generate_backref()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2493, in _generate_backref
+    self._add_reverse_property(self.back_populates)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2063, in _add_reverse_property
+    other = self.mapper.get_property(key, _configure_mappers=False)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 2055, in get_property
+    util.raise_(
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+sqlalchemy.exc.InvalidRequestError: Mapper 'mapped class User->user' has no property 'race'
+2022-12-13 06:27:35,917 - transactions - ERROR - (check_user): Mapper 'mapped class Orb->orb' has no property 'users'
+2022-12-13 06:27:35,917 - transactions - ERROR - Mapper 'mapped class Orb->orb' has no property 'users'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 2053, in get_property
+    return self._props[key]
+KeyError: 'users'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 351, in check_user
+    user = session.query(User).filter(User.username == username).first()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2161, in query
+    return self._query_cls(entities, self, **kwargs)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\query.py", line 180, in __init__
+    self._set_entities(entities)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\query.py", line 187, in _set_entities
+    self._raw_columns = [
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\query.py", line 188, in <listcomp>
+    coercions.expect(
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\sql\coercions.py", line 181, in expect
+    insp._post_inspect
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 1184, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 2199, in _post_inspect
+    self._check_configure()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1941, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3527, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3566, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1958, in _post_configure_properties
+    prop.init()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 231, in init
+    self.do_init()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2157, in do_init
+    self._generate_backref()
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2493, in _generate_backref
+    self._add_reverse_property(self.back_populates)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2063, in _add_reverse_property
+    other = self.mapper.get_property(key, _configure_mappers=False)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 2055, in get_property
+    util.raise_(
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+sqlalchemy.exc.InvalidRequestError: Mapper 'mapped class Orb->orb' has no property 'users'
+2022-12-13 06:32:25,977 - transactions - ERROR - (save_user_location): Parent instance <User at 0x1bd4caaffd0> is not bound to a Session; lazy load operation of attribute 'locations' cannot proceed (Background on this error at: https://sqlalche.me/e/14/bhk3)
+2022-12-13 06:32:25,978 - transactions - ERROR - Parent instance <User at 0x1bd4caaffd0> is not bound to a Session; lazy load operation of attribute 'locations' cannot proceed (Background on this error at: https://sqlalche.me/e/14/bhk3)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 422, in save_user_location
+    user.locations.append(location)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 482, in __get__
+    return self.impl.get(state, dict_)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 942, in get
+    value = self._fire_loader_callables(state, key, passive)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 978, in _fire_loader_callables
+    return self.callable_(state, passive)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\strategies.py", line 863, in _load_for_state
+    raise orm_exc.DetachedInstanceError(
+sqlalchemy.orm.exc.DetachedInstanceError: Parent instance <User at 0x1bd4caaffd0> is not bound to a Session; lazy load operation of attribute 'locations' cannot proceed (Background on this error at: https://sqlalche.me/e/14/bhk3)
+2022-12-13 06:45:49,125 - transactions - ERROR - (save_user_location): 'Query' object has no attribute '_sa_instance_state'
+2022-12-13 06:45:49,127 - transactions - ERROR - 'Query' object has no attribute '_sa_instance_state'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 422, in save_user_location
+    user.locations.append(location)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\collections.py", line 1169, in append
+    item = __set(self, item, _sa_initiator)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\collections.py", line 1134, in __set
+    item = executor.fire_append_event(item, _sa_initiator)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\collections.py", line 753, in fire_append_event
+    return self.attr.fire_append_event(
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 1430, in fire_append_event
+    value = fn(state, value, initiator or self._append_token)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 1772, in emit_backref_from_collection_append_event
+    child_state, child_dict = instance_state(child), instance_dict(child)
+AttributeError: 'Query' object has no attribute '_sa_instance_state'
+2022-12-13 08:13:34,734 - transactions - ERROR - (get_all_orbs): type object 'User' has no attribute 'user'
+2022-12-13 08:13:34,749 - transactions - ERROR - type object 'User' has no attribute 'user'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 387, in get_user
+    user = session.query(User).filter(User.user == id_).first()
+AttributeError: type object 'User' has no attribute 'user'
+2022-12-13 08:56:33,047 - transactions - ERROR - (get_all_orbs): type object 'User' has no attribute 'user'
+2022-12-13 08:56:33,077 - transactions - ERROR - type object 'User' has no attribute 'user'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 387, in get_user
+    user = session.query(User).filter(User.user == id_).first()
+AttributeError: type object 'User' has no attribute 'user'
+2022-12-13 08:58:44,024 - transactions - ERROR - (get_all_orbs): type object 'User' has no attribute 'user'
+2022-12-13 08:58:44,025 - transactions - ERROR - type object 'User' has no attribute 'user'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 387, in get_user
+    user = session.query(User).filter(User.user == id_).first()
+AttributeError: type object 'User' has no attribute 'user'
+2022-12-13 13:10:01,933 - transactions - ERROR - (save_user_location): Instance '<User at 0x27358f26730>' is not persistent within this Session
+2022-12-13 13:10:01,949 - transactions - ERROR - Instance '<User at 0x27358f26730>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 489, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x27358f26730>' is not persistent within this Session
+2022-12-13 13:47:21,151 - transactions - ERROR - (choose_weapon): Instance '<User at 0x1ecdc955430>' is not persistent within this Session
+2022-12-13 13:47:21,163 - transactions - ERROR - Instance '<User at 0x1ecdc955430>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 489, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x1ecdc955430>' is not persistent within this Session
+2022-12-13 13:54:49,346 - transactions - ERROR - (choose_weapon): 'User' object has no attribute 'user_weapon'
+2022-12-13 13:54:49,346 - transactions - ERROR - 'User' object has no attribute 'user_weapon'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 488, in choose_weapon
+    user.user_weapon.append(weapon)
+AttributeError: 'User' object has no attribute 'user_weapon'
+2022-12-13 14:02:54,800 - transactions - ERROR - (choose_weapon): Instance '<User at 0x18107c7eeb0>' is not persistent within this Session
+2022-12-13 14:02:54,800 - transactions - ERROR - Instance '<User at 0x18107c7eeb0>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 503, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x18107c7eeb0>' is not persistent within this Session
+2022-12-13 14:07:40,215 - transactions - ERROR - (get_all_orbs): 'User' object has no attribute 'name'
+2022-12-13 14:07:40,215 - transactions - ERROR - 'User' object has no attribute 'name'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 391, in get_user
+    print(user.name)
+AttributeError: 'User' object has no attribute 'name'
+2022-12-13 14:09:09,262 - transactions - ERROR - (choose_weapon): Incompatible collection type: Weapon is not list-like
+2022-12-13 14:09:09,262 - transactions - ERROR - Incompatible collection type: Weapon is not list-like
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 502, in choose_weapon
+    user.weapons = weapon
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 460, in __set__
+    self.impl.set(
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 1564, in set
+    raise TypeError(
+TypeError: Incompatible collection type: Weapon is not list-like
+2022-12-13 14:10:22,790 - transactions - ERROR - (choose_weapon): Instance '<User at 0x25ccb02eee0>' is not persistent within this Session
+2022-12-13 14:10:22,790 - transactions - ERROR - Instance '<User at 0x25ccb02eee0>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 504, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x25ccb02eee0>' is not persistent within this Session
+2022-12-13 14:11:32,092 - transactions - ERROR - (choose_weapon): 'InstrumentedList' object has no attribute 'appen'
+2022-12-13 14:11:32,092 - transactions - ERROR - 'InstrumentedList' object has no attribute 'appen'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 502, in choose_weapon
+    user.weapons.appen(weapon)
+AttributeError: 'InstrumentedList' object has no attribute 'appen'
+2022-12-13 14:12:19,063 - transactions - ERROR - (choose_weapon): Instance '<User at 0x26693ac4b20>' is not persistent within this Session
+2022-12-13 14:12:19,063 - transactions - ERROR - Instance '<User at 0x26693ac4b20>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 504, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x26693ac4b20>' is not persistent within this Session
+2022-12-13 14:13:55,368 - transactions - ERROR - (choose_weapon): Instance '<User at 0x19753c25b20>' is not persistent within this Session
+2022-12-13 14:13:55,369 - transactions - ERROR - Instance '<User at 0x19753c25b20>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 504, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x19753c25b20>' is not persistent within this Session
+2022-12-13 14:14:33,842 - transactions - ERROR - (choose_weapon): Instance '<User at 0x27286ca5400>' is not persistent within this Session
+2022-12-13 14:14:33,843 - transactions - ERROR - Instance '<User at 0x27286ca5400>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 504, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x27286ca5400>' is not persistent within this Session
+2022-12-13 14:15:16,290 - transactions - ERROR - (choose_weapon): Instance '<User at 0x1cca9d5eee0>' is not persistent within this Session
+2022-12-13 14:15:16,290 - transactions - ERROR - Instance '<User at 0x1cca9d5eee0>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 505, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x1cca9d5eee0>' is not persistent within this Session
+2022-12-13 14:19:15,928 - transactions - ERROR - (choose_weapon): Object '<Weapon at 0x2302829fb20>' is already attached to session '5' (this is '4')
+2022-12-13 14:19:15,929 - transactions - ERROR - Object '<Weapon at 0x2302829fb20>' is already attached to session '5' (this is '4')
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 514, in choose_weapon
+    user.weapons.append(weapon)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\collections.py", line 1169, in append
+    item = __set(self, item, _sa_initiator)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\collections.py", line 1134, in __set
+    item = executor.fire_append_event(item, _sa_initiator)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\collections.py", line 753, in fire_append_event
+    return self.attr.fire_append_event(
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 1430, in fire_append_event
+    value = fn(state, value, initiator or self._append_token)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 68, in append
+    sess._save_or_update_state(item_state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2667, in _save_or_update_state
+    self._save_or_update_impl(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3284, in _save_or_update_impl
+    self._update_impl(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3267, in _update_impl
+    to_attach = self._before_attach(state, obj)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3361, in _before_attach
+    raise sa_exc.InvalidRequestError(
+
+2022-12-13 14:22:13,690 - transactions - ERROR - (choose_weapon): Instance '<User at 0x14e227e5820>' is not persistent within this Session
+2022-12-13 14:22:13,690 - transactions - ERROR - Instance '<User at 0x14e227e5820>' is not persistent within this Session
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 520, in choose_weapon
+    session.refresh(user)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in refresh
+    self._expire_state(state, attribute_names)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2436, in _expire_state
+    self._validate_persistent(state)
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3222, in _validate_persistent
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Instance '<User at 0x14e227e5820>' is not persistent within this Session
+2022-12-13 14:28:52,193 - transactions - ERROR - (choose_weapon): 'User' object has no attribute 'with_session'
+2022-12-13 14:28:52,194 - transactions - ERROR - 'User' object has no attribute 'with_session'
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 498, in choose_weapon
+    user.with_session.weapons.append(weapon)
+AttributeError: 'User' object has no attribute 'with_session'
+2022-12-13 18:14:23,113 - transaction_two - ERROR - Error (get_weapons): no such column: user_id.id
+2022-12-13 18:14:23,130 - transaction_two - ERROR - no such column: user_id.id
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 242, in get_user_locations
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: user_id.id
+2022-12-13 18:16:27,443 - transaction_two - ERROR - Error (get_weapons): no such column: user_id.id
+2022-12-13 18:16:27,444 - transaction_two - ERROR - no such column: user_id.id
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 242, in get_user_locations
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: user_id.id
+2022-12-13 18:17:31,828 - transaction_two - ERROR - Error (get_user_by_id): row value misused
+2022-12-13 18:17:31,828 - transaction_two - ERROR - row value misused
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 118, in get_user_by_id
+    cursor.execute(query)
+sqlite3.OperationalError: row value misused
+2022-12-13 18:34:07,048 - transaction_two - ERROR - Error (get_user_by_id): row value misused
+2022-12-13 18:34:07,049 - transaction_two - ERROR - row value misused
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 119, in get_user_by_id
+    cursor.execute(query)
+sqlite3.OperationalError: row value misused
+2022-12-13 18:38:50,430 - transaction_two - ERROR - Error (get_user_by_id): row value misused
+2022-12-13 18:38:50,431 - transaction_two - ERROR - row value misused
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 119, in get_user_by_id
+    cursor.execute(query)
+sqlite3.OperationalError: row value misused
+2022-12-13 18:41:11,871 - transaction_two - ERROR - Error (get_user_by_id): row value misused
+2022-12-13 18:41:11,872 - transaction_two - ERROR - row value misused
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 119, in get_user_by_id
+    cursor.execute(query)
+sqlite3.OperationalError: row value misused
+2022-12-13 18:42:26,750 - transaction_two - ERROR - Error (get_user_by_id): row value misused
+2022-12-13 18:42:26,751 - transaction_two - ERROR - row value misused
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 119, in get_user_by_id
+    cursor.execute(query)
+sqlite3.OperationalError: row value misused
+2022-12-13 18:44:38,173 - transaction_two - ERROR - Error (get_user_by_id): row value misused
+2022-12-13 18:44:38,174 - transaction_two - ERROR - row value misused
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 119, in get_user_by_id
+    cursor.execute(query)
+sqlite3.OperationalError: row value misused
+2022-12-13 18:47:38,481 - transaction_two - ERROR - Error (get_user_by_id): row value misused
+2022-12-13 18:47:38,482 - transaction_two - ERROR - row value misused
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 120, in get_user_by_id
+    cursor.execute(query)
+sqlite3.OperationalError: row value misused
+2022-12-13 20:33:39,638 - transaction_two - ERROR - Error (get_weapons): no such table: user_weapons
+2022-12-13 20:33:39,653 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 259, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-13 20:36:09,081 - transaction_two - ERROR - Error (get_weapons): no such table: user_weapons
+2022-12-13 20:36:09,082 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 259, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-13 20:42:33,814 - transaction_two - ERROR - Error (get_weapons): no such table: user_weapons
+2022-12-13 20:42:33,814 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 259, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-13 20:42:53,615 - transaction_two - ERROR - Error (save_user_location): no such column: price
+2022-12-13 20:42:53,616 - transaction_two - ERROR - no such column: price
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 335, in update_price
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: price
+2022-12-13 20:54:34,701 - transaction_two - ERROR - Error (get_weapons): no such table: user_weapons
+2022-12-13 20:54:34,702 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 259, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-13 20:54:48,656 - transaction_two - ERROR - Error (save_user_location): near "%": syntax error
+2022-12-13 20:54:48,656 - transaction_two - ERROR - near "%": syntax error
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 335, in update_price
+    cursor.execute("UPDATE user SET price = price - %s WHERE user.id = %s", (amount, user_id))
+sqlite3.OperationalError: near "%": syntax error
+2022-12-13 20:59:09,813 - transaction_two - ERROR - Error (get_weapons): no such table: user_weapons
+2022-12-13 20:59:09,814 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 259, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-13 20:59:12,729 - transaction_two - ERROR - Error (save_user_location): near "%": syntax error
+2022-12-13 20:59:12,729 - transaction_two - ERROR - near "%": syntax error
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 335, in update_price
+    cursor.execute("UPDATE user SET coins = coins - %s WHERE user.id = %s", (amount, user_id))
+sqlite3.OperationalError: near "%": syntax error
+2022-12-13 21:19:05,280 - transaction_two - ERROR - Error (get_weapons): no such table: user_weapons
+2022-12-13 21:19:05,281 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 259, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-13 21:33:46,394 - transaction_two - ERROR - Error (get_weapons): no such table: user_weapons
+2022-12-13 21:33:46,428 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 259, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-14 04:51:10,990 - transaction_two - ERROR - Error (get_user_weapons): no such table: user_weapons
+2022-12-14 04:51:11,007 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 293, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-14 04:54:32,811 - transaction_two - ERROR - Error (get_user_weapons): no such table: user_weapons
+2022-12-14 04:54:32,811 - transaction_two - ERROR - no such table: user_weapons
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 293, in get_user_weapons
+    cursor.execute(query)
+sqlite3.OperationalError: no such table: user_weapons
+2022-12-14 05:58:30,246 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 05:58:30,811 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:09:02,846 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:09:02,846 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:09:29,476 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:09:29,477 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:25:46,307 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:25:46,307 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:25:51,194 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:25:51,194 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:27:38,646 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:27:38,646 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:38:21,492 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:38:21,492 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:38:27,007 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:38:27,007 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:41:31,231 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:41:31,231 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio
+2022-12-14 06:41:40,908 - transaction_two - ERROR - Error (update_rank): no such column: medio
+2022-12-14 06:41:40,909 - transaction_two - ERROR - no such column: medio
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transaction_two.py", line 429, in update_rank
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: medio

@@ -1,0 +1,30 @@
+Fallen is an action-adventure-packed text-based MUD game that combines combat, roleplaying,
+and interactive fiction gameplay that gets you excited. The game takes place in a fantasy world,
+Roth, which has three realms: Inferno, Terra, and Paraíso. Characters are in two categories:
+Viaxeiros and Orixinais. The Orixinais have abilities like telekinesis, sonic beams, and enhanced
+intelligence while the Viaxeiros have abilities like rapid healing, flight, and physical strength
+
+
+A Viaxeiros is cast down to the Inferno realm filled with fiery monsters and demons, while an Orixinais is cast to
+the Terra realm filled with beasts that swim, run, and fly. After being cast down, the Orixinais
+and Viaxeiros possess only a fraction of their abilities and are half-mortal. To become worthy
+again and return home to Paraíso, they must obtain three powerful magical orbs scattered across
+the Inferno and Terra realms. Choose your character and build your strength and rank to be able to wield an orb.
+These orbs (poder, coñecemento, vida) represent power, knowledge, and life. The poder orbs are found in the Terra realm,
+while the vida orbs are found in the Inferno realm.
+The coñecemento orbs can be found in either realm. The Your characters cannot
+ascend to Paraíso without obtaining all three, this means your characters will travel between realms in
+search of these orbs.
+
+Fight monsters, demons, and beasts of different kinds across the realm to build their strength level
+gain abilities. The ranks are divided into three: baixo (low), medio (medium), and
+alto (high). Characters can be Viaxeiros-baixo, Viaxeiros-medio, or Viaxeiros-alto or they can be
+Orixinais-low, Orixinais-medio, or Orixinais-alto.
+
+Characters usually start the game as baixo with a strength level of 10% and 10 coins. To upgrade
+to medio, strength level has to be greater or equal to 50%, and for alto, 100%. The minimum
+strength level and rank needed to wield a coñecemento orb are 20% and baixo respectively. The
+minimum strength level and rank needed to wield a poder orb are 40% and medio respectively.
+Lastly, the minimum strength level and rank needed to wield a vida orb are 80% and alto
+respectively. Maps show characters the locations of orbs, monster caves, checkpoints, and portals
+across the realm.

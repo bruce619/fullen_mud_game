@@ -1,0 +1,30 @@
+2022-12-14 11:47:39,157 - transactions - ERROR - Error (get_inventory_by_id): no such column: bruce
+2022-12-14 11:47:39,157 - transactions - ERROR - no such column: bruce
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 260, in get_user_by_username
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: bruce
+2022-12-14 11:48:00,334 - transactions - ERROR - Error (create_user): UNIQUE constraint failed: user.username
+2022-12-14 11:48:00,334 - transactions - ERROR - UNIQUE constraint failed: user.username
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 367, in create_user
+    cursor.execute(query)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+2022-12-14 11:48:00,448 - transactions - ERROR - Error (get_inventory_by_id): no such column: Tobi
+2022-12-14 11:48:00,448 - transactions - ERROR - no such column: Tobi
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 260, in get_user_by_username
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: Tobi
+2022-12-14 11:48:57,816 - transactions - ERROR - Error (create_user): UNIQUE constraint failed: user.username
+2022-12-14 11:48:57,817 - transactions - ERROR - UNIQUE constraint failed: user.username
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 367, in create_user
+    cursor.execute(query)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+2022-12-14 13:03:36,195 - transactions - ERROR - Error (create_user): UNIQUE constraint failed: user.username
+2022-12-14 13:03:36,196 - transactions - ERROR - UNIQUE constraint failed: user.username
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\UEA\Computing Science\APPLICATION PROGRAMMING CMP 7000A\Assignment\2\fallen_mud_game\transactions.py", line 367, in create_user
+    cursor.execute(query)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
